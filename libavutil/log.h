@@ -113,4 +113,6 @@ void av_log_set_level(int);
 void av_log_set_callback(void (*)(void*, int, const char*, va_list));
 void av_log_default_callback(void* ptr, int level, const char* fmt, va_list vl);
 
+#define LOG_MARKER av_log(NULL, AV_LOG_ERROR, "%s:%d MARKER\n", __FILE__, __LINE__)
+
 #endif /* AVUTIL_LOG_H */
