@@ -113,7 +113,6 @@ LOCAL_MODULE := libavcodec
 
 LOCAL_PRELINK_MODULE := false
 
-LOCAL_SHARED_LIBRARIES := libavutil
 
 LOCAL_C_INCLUDES := 				\
 	$(FFMPEG_TOP)/				\
@@ -123,4 +122,4 @@ LOCAL_C_INCLUDES := 				\
 
 LOCAL_CFLAGS += -O4 -mno-thumb-interwork -mno-thumb -marm -DHAVE_AV_CONFIG_H
 
-include $(BUILD_SHARED_LIBRARY)
+include $(BUILD_STATIC_LIBRARY)
